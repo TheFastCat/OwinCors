@@ -100,22 +100,6 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- START DYNAMIC ASSEMBLY VERSIONING WORK-->
-  <PropertyGroup>
-    <!-- The file path output by SalesApplication.Versioning.csproj -->
-    <Input-PropertiesDir>..\SalesApplication.Versioning\Properties</Input-PropertiesDir>
-    <!-- The file output by SalesApplication.Versioning.csproj -->
-    <Input-VersionFileName>AutoVersion.cs</Input-VersionFileName>
-  </PropertyGroup>
-  <Target Name="BeforeBuild">
-    <ItemGroup>
-      <My-AssemblyInfo Include="$(Input-PropertiesDir)\$(Input-VersionFileName)" />
-      <Compile Include="@(My-AssemblyInfo)">
-      </Compile>
-    </ItemGroup>
-  </Target>
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <!-- END DYNAMIC ASSEMBLY VERSIONING WORK-->
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
