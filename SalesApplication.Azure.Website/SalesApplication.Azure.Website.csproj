@@ -69,9 +69,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <None Include="Properties\PublishProfiles\saleswebsite - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\saleswebsite - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\saleswebsite.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
