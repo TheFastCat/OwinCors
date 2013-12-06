@@ -77,22 +77,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SalesApplication.Api\SalesApplication.Api.csproj">
-      <Project>{a3ffeb01-84c2-4283-96d4-05691fd05dfb}</Project>
-      <Name>SalesApplication.Api</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SalesApplication.Nancy\SalesApplication.Nancy.csproj">
-      <Project>{cb569fed-c319-4e0d-a49c-82047a623ad4}</Project>
-      <Name>SalesApplication.Nancy</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SalesApplication.Owin.Startup\SalesApplication.Owin.Startup.csproj">
       <Project>{53c6a8c1-0c34-41c8-8a7e-ec6785570dcc}</Project>
       <Name>SalesApplication.Owin.Startup</Name>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-    </ProjectReference>
-    <ProjectReference Include="..\SalesApplication.UI\SalesApplication.UI.csproj">
-      <Project>{43ba1d56-e6d3-42a7-9d90-d5b6ff8c98fe}</Project>
-      <Name>SalesApplication.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
