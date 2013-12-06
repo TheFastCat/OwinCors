@@ -59,7 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Environment\CustomBootstrapper.cs" />
-    <Compile Include="Modules\AjaxModule.cs" />
     <Compile Include="Modules\DefaultModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
