@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43BA1D56-E6D3-42A7-9D90-D5B6FF8C98FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SalesApplication.UI</RootNamespace>
+    <AssemblyName>SalesApplication.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Properties\SalesApplication.Views.Strong.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Hooker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\customer.sshtml" />
+    <EmbeddedResource Include="Views\customers.sshtml" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="packages.config" />
+    <None Include="Properties\SalesApplication.Views.Strong.snk" />
+    <EmbeddedResource Include="Views\topAccountTypes.sshtml" />
+    <EmbeddedResource Include="Views\versions.sshtml" />
+    <None Include="Scripts\jquery-2.0.3.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="css\BootstrapAssets\docs.css" />
+    <EmbeddedResource Include="css\BootstrapAssets\pygments-manni.css" />
+    <EmbeddedResource Include="css\BootstrapAssets\starter-template.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <EmbeddedResource Include="Images\BootstrapAssets\apple-touch-icon-144-precomposed.png" />
+    <EmbeddedResource Include="Images\BootstrapAssets\favicon.png" />
+    <EmbeddedResource Include="Scripts\bootstrap.js" />
+    <EmbeddedResource Include="Scripts\bootstrap.min.js" />
+    <EmbeddedResource Include="Scripts\BootStrapAssets\application.js" />
+    <EmbeddedResource Include="Scripts\BootStrapAssets\customizer.js" />
+    <EmbeddedResource Include="Scripts\BootStrapAssets\filesaver.js" />
+    <EmbeddedResource Include="Scripts\BootStrapAssets\holder.js" />
+    <EmbeddedResource Include="Scripts\BootStrapAssets\ie8-responsive-file-warning.js" />
+    <EmbeddedResource Include="Scripts\BootStrapAssets\jszip.js" />
+    <EmbeddedResource Include="Scripts\BootStrapAssets\less.js" />
+    <EmbeddedResource Include="Scripts\BootStrapAssets\raw-files.js" />
+    <EmbeddedResource Include="Scripts\BootStrapAssets\uglify.js" />
+    <EmbeddedResource Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <EmbeddedResource Include="Scripts\jquery-2.0.3.js" />
+    <EmbeddedResource Include="Scripts\jquery-2.0.3.min.js" />
+    <EmbeddedResource Include="Views\ajax.html" />
+    <EmbeddedResource Include="css\bootstrap-theme.css" />
+    <EmbeddedResource Include="css\bootstrap-theme.min.css" />
+    <EmbeddedResource Include="css\bootstrap.css" />
+    <EmbeddedResource Include="css\bootstrap.min.css" />
+    <EmbeddedResource Include="Images\Nancy\websiteFavicon.png" />
+    <EmbeddedResource Include="Images\Nancy\cloudServiceFavicon.png" />
+    <Content Include="README.txt" />
+    <EmbeddedResource Include="Scripts\knockout-3.0.0.debug.js" />
+    <EmbeddedResource Include="Scripts\knockout-3.0.0.js" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- START DYNAMIC ASSEMBLY VERSIONING WORK-->
+  <PropertyGroup>
+    <!-- The file path output by SalesApplication.Versioning.csproj -->
+    <Input-PropertiesDir>..\SalesApplication.Versioning\Properties</Input-PropertiesDir>
+    <!-- The file output by SalesApplication.Versioning.csproj -->
+    <Input-VersionFileName>AutoVersion.cs</Input-VersionFileName>
+  </PropertyGroup>
+  <Target Name="BeforeBuild">
+    <ItemGroup>
+      <My-AssemblyInfo Include="$(Input-PropertiesDir)\$(Input-VersionFileName)" />
+      <Compile Include="@(My-AssemblyInfo)">
+      </Compile>
+    </ItemGroup>
+  </Target>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- END DYNAMIC ASSEMBLY VERSIONING WORK-->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

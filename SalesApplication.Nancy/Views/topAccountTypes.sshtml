@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Top Account Types</title>
+  </head>
+  <body>
+
+  <b><font size="7" color="#FA5458">Top Account Types</font></b>
+  <br />
+  <br />
+    @Each
+    <div>
+      <b><font size="5">@Current.Type</font></b>
+      <br />
+      Description: @Current.Description
+      <br />
+	  Key: @Current.TopAcctTypes_key
+	  <br/>
+	  Changed By: @Current.changed_by
+	  <br/>
+	  @If.Haschanged_by_key
+		   Changed By Key: @Current.changed_by_key
+		   <br />
+	  @EndIf
+	  @If.Haschanged_date
+		   Changed Date: @Current.changed_date
+		   <br />
+	  @EndIf
+	  @If.Hasis_active
+		   Active: @Current.is_active
+		   <br />
+	  @EndIf
+    </div>
+    <hr>
+    @EndEach
+
+</body>
+</html>

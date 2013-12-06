@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB569FED-C319-4E0D-A49C-82047A623AD4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SalesApplication.Nancy</RootNamespace>
+    <AssemblyName>SalesApplication.Nancy</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Nancy, Version=0.21.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>SmartGuysNancyFix\Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Embedded, Version=0.21.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>SmartGuysNancyFix\Nancy.Embedded.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Environment\CloudServiceBootstrapper.cs" />
+    <Compile Include="Environment\CustomBootstrapper.cs" />
+    <Compile Include="Environment\WebsiteBootstrapper.cs" />
+    <Compile Include="Modules\AjaxModule.cs" />
+    <Compile Include="Modules\DefaultModule.cs" />
+    <Compile Include="Modules\VersionModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SalesApplication.Info\SalesApplication.Info.csproj">
+      <Project>{4f0564dd-f37e-40d2-8cac-380cd702d2bb}</Project>
+      <Name>SalesApplication.Info</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SalesApplication.UI\SalesApplication.UI.csproj">
+      <Project>{43ba1d56-e6d3-42a7-9d90-d5b6ff8c98fe}</Project>
+      <Name>SalesApplication.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.txt" />
+    <Content Include="SmartGuysNancyFix\Nancy.dll" />
+    <Content Include="SmartGuysNancyFix\Nancy.Embedded.dll" />
+    <Content Include="SmartGuysNancyFix\Nancy.Embedded.pdb" />
+    <Content Include="SmartGuysNancyFix\Nancy.pdb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- START DYNAMIC ASSEMBLY VERSIONING WORK-->
+  <PropertyGroup>
+    <!-- The file path output by SalesApplication.Versioning.csproj -->
+    <Input-PropertiesDir>..\SalesApplication.Versioning\Properties</Input-PropertiesDir>
+    <!-- The file output by SalesApplication.Versioning.csproj -->
+    <Input-VersionFileName>AutoVersion.cs</Input-VersionFileName>
+  </PropertyGroup>
+  <Target Name="BeforeBuild">
+    <ItemGroup>
+      <My-AssemblyInfo Include="$(Input-PropertiesDir)\$(Input-VersionFileName)" />
+      <Compile Include="@(My-AssemblyInfo)">
+      </Compile>
+    </ItemGroup>
+  </Target>
+  <!-- END DYNAMIC ASSEMBLY VERSIONING WORK-->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
