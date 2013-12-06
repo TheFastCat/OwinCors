@@ -58,24 +58,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Environment\CloudServiceBootstrapper.cs" />
     <Compile Include="Environment\CustomBootstrapper.cs" />
-    <Compile Include="Environment\WebsiteBootstrapper.cs" />
     <Compile Include="Modules\AjaxModule.cs" />
     <Compile Include="Modules\DefaultModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SalesApplication.UI\SalesApplication.UI.csproj">
-      <Project>{43ba1d56-e6d3-42a7-9d90-d5b6ff8c98fe}</Project>
-      <Name>SalesApplication.UI</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.txt" />
     <Content Include="SmartGuysNancyFix\Nancy.dll" />
     <Content Include="SmartGuysNancyFix\Nancy.Embedded.dll" />
     <Content Include="SmartGuysNancyFix\Nancy.Embedded.pdb" />
+    <Content Include="SmartGuysNancyFix\Nancy.Owin.dll" />
+    <Content Include="SmartGuysNancyFix\Nancy.Owin.pdb" />
     <Content Include="SmartGuysNancyFix\Nancy.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

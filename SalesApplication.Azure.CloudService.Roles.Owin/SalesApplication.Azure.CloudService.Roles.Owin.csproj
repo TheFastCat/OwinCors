@@ -108,10 +108,6 @@
       <Project>{53c6a8c1-0c34-41c8-8a7e-ec6785570dcc}</Project>
       <Name>SalesApplication.Owin.Startup</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SalesApplication.UI\SalesApplication.UI.csproj">
-      <Project>{43ba1d56-e6d3-42a7-9d90-d5b6ff8c98fe}</Project>
-      <Name>SalesApplication.UI</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
