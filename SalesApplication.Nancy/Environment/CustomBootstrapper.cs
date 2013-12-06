@@ -5,7 +5,6 @@ using Nancy.Embedded;
 using Nancy.Embedded.Conventions;
 using Nancy.TinyIoc;
 using Nancy.Diagnostics;
-using SalesApplication.Info;
 using SalesApplication.Nancy.Modules;
 using SalesApplication.UI;
 using System.Reflection;
@@ -21,9 +20,6 @@ namespace SalesApplication.Nancy.Environment
         {
             // enable for NancyFx diagnostics
             StaticConfiguration.EnableRequestTracing = true;
-
-            // register the dependencies for our module classes...
-            container.Register<IApplicationInfo,    ApplicationInfo>();
 
             // see http://is.gd/yezLsQ for embedding views into Nancy's assemblies
             // to make consumption by client assemblies easier

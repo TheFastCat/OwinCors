@@ -90,10 +90,6 @@
     <Content Include="README.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SalesApplication.Api\SalesApplication.Api.csproj">
-      <Project>{a3ffeb01-84c2-4283-96d4-05691fd05dfb}</Project>
-      <Name>SalesApplication.Api</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SalesApplication.Nancy\SalesApplication.Nancy.csproj">
       <Project>{cb569fed-c319-4e0d-a49c-82047a623ad4}</Project>
       <Name>SalesApplication.Nancy</Name>

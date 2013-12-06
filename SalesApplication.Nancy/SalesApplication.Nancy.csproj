@@ -63,14 +63,9 @@
     <Compile Include="Environment\WebsiteBootstrapper.cs" />
     <Compile Include="Modules\AjaxModule.cs" />
     <Compile Include="Modules\DefaultModule.cs" />
-    <Compile Include="Modules\VersionModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SalesApplication.Info\SalesApplication.Info.csproj">
-      <Project>{4f0564dd-f37e-40d2-8cac-380cd702d2bb}</Project>
-      <Name>SalesApplication.Info</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SalesApplication.UI\SalesApplication.UI.csproj">
       <Project>{43ba1d56-e6d3-42a7-9d90-d5b6ff8c98fe}</Project>
       <Name>SalesApplication.UI</Name>
