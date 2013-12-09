@@ -1,31 +1,26 @@
-NancyStaticContentEmbeddedResourceOnIIS
+NancyIISHostingNotWorking
 =======================================
 
-A NancyFx OWIN web application hosted on IIS
+for some reason my SystemWeb hosting of OWIN & Nancy is not functioning
 
+I created a demo repo for repro: https://github.com/TheFastCat/NancyIISHostingNotWorking
 
-for some reason IIS won't serve the static content files leveraging Nancy.Embedded (see CustomBootstrapper.cs within SalesApplication.csproj)
+To repro:
 
-SalesApplication.Azure.Website.csproj is the application entry point; uses  Microsoft.Owin.Host.SystemWeb to host 
-Nancy from within the OWIN pipeline (see SalesApplication.Owin.Startup.csproj for OWIN startup class that gets booted up).
+	F5 the website project (SystemWeb OWIN hosting) and navigate to /_Nancy
 
-The Website project references the Owin Startup class to use via an explicit declaration from within AssemblyInfo.cs
+Expected:
+	Static assets for the diagnostics page
 
-[assembly: OwinStartup(typeof(Startup))]
+result:
+	Skeleton Nancy Diagnostics page 
 
-The Static content  that is served by nanacy resides within the SalesApplication.UI.csproj
+- no diagnostics assets
 
+try the same thing with the Azure.CloudService.csproj (self hosted) and it functions as expected.
 
-The application code works as expected when deployed self-hosted on an Azure Cloud Service:
-
-  http://sel2.us/
-  
-  (can reach http://sel2.us/_Nancy just fine)
-
-however as an IIS Azure Website static, embedded content doesn't seem to be served:
-
-  http://salesapp.us/_Nancy
-  
+both projects leverage and invoke the same OWIN pipeline that boots up Nancy
+in both projects the /HelloNancy route is handled as expected
 
 
 ////////// Comments:
