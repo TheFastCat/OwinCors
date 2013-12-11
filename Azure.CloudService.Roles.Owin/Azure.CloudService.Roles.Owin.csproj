@@ -100,6 +100,10 @@
     <Content Include="README.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{cb569fed-c319-4e0d-a49c-82047a623ad4}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Startup\Startup.csproj">
       <Project>{53c6a8c1-0c34-41c8-8a7e-ec6785570dcc}</Project>
       <Name>Startup</Name>
