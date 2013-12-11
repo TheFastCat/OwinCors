@@ -29,7 +29,7 @@ namespace Core
         /// <see cref="https://github.com/NancyFx/Nancy/wiki/Diagnostics"/>
         protected override DiagnosticsConfiguration DiagnosticsConfiguration
         {
-            get { return new DiagnosticsConfiguration { Password = @"Artery22" }; }
+            get { return new DiagnosticsConfiguration { Password = @"hi" }; }
         }
     }
 }
