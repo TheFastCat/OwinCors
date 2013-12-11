@@ -86,7 +86,7 @@
     <Content Include="README.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Nancy.Config\Core.csproj">
+    <ProjectReference Include="..\Core\Core.csproj">
       <Project>{cb569fed-c319-4e0d-a49c-82047a623ad4}</Project>
       <Name>Core</Name>
     </ProjectReference>

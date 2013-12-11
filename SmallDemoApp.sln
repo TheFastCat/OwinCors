@@ -16,9 +16,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azure.CloudService.Roles.Ow
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azure.Website", "Azure.Website\Azure.Website.csproj", "{49B96280-4AF4-43CC-8764-E5DEAFBD86A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Nancy.Config\Core.csproj", "{CB569FED-C319-4E0D-A49C-82047A623AD4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{CB569FED-C319-4E0D-A49C-82047A623AD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Startup", "Owin.Startup\Startup.csproj", "{53C6A8C1-0C34-41C8-8A7E-EC6785570DCC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Startup", "Startup\Startup.csproj", "{53C6A8C1-0C34-41C8-8A7E-EC6785570DCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
