@@ -42,10 +42,6 @@
     <Reference Include="Nancy">
       <HintPath>..\packages\Nancy.0.21.1\lib\net40\Nancy.dll</HintPath>
     </Reference>
-    <Reference Include="Nancy.Embedded, Version=0.21.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>SmartGuysNancyFix\Nancy.Embedded.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
