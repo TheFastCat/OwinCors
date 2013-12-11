@@ -5,7 +5,7 @@
       <Import moduleName="Diagnostics" />
     </Imports>
     <Endpoints>
-      <InputEndpoint name="OwinEndpoint" protocol="http" port="8080" />
+      <InputEndpoint name="OwinEndpoint" protocol="http" port="4444" />
     </Endpoints>
   </WorkerRole>
 </ServiceDefinition>
